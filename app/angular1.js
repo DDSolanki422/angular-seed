@@ -33,7 +33,7 @@ angular.module('module1',['ngRoute'])
 	scope.data=data;
 }])
 .controller('childController',function($scope,data){
-		console.log($scope);
+		//console.log($scope);
 		$scope.data=data;
 		$scope.data.title="Wells framework";
 })
@@ -46,7 +46,7 @@ angular.module('module1',['ngRoute'])
 		}
 		else{
 			var expression='^\\w{0,'+char+'}';
-			console.log(input);
+			//console.log(input);
 			reversedString=input.replace(new RegExp(expression,'i'),function($1){ return $1.split("").reverse().join("");});
 		}return reversedString;
 	}
@@ -61,8 +61,6 @@ angular.module('module1',['ngRoute'])
 			var self=this;
 
 			this.$onInit=function(){
-				console.log('insid ehte firstCompoennet init');
-				
 			}
 
 
@@ -87,14 +85,14 @@ angular.module('module1',['ngRoute'])
 		//this.name=this.firstCompo;
 		
 		this.$onInit=function(){
-			console.log('inside the childCompoennt init');
+			//console.log('inside the childCompoennt init');
 		}
 		this.$onChanges= function(changesObj){
-			console.log('inside the on changes of childCompoennt');
-			console.log(changesObj);
+			//console.log('inside the on changes of childCompoennt');
+			//console.log(changesObj);
 		}
 		this.$doCheck=function(){
-			console.log('inside the on changes');
+			//console.log('inside the on changes');
 		}
 	},
 	template:'<hr/><div> Hi this is child Component which has dependency on firstComponent</div>'+
